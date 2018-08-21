@@ -4,11 +4,11 @@ import com.google.api.services.gmail.model.Message;
 import main.java.MessageHandler;
 import main.java.Purchase;
 
-public class AmazonHandler extends SellerHandler {
+public class HostelworldHandler extends SellerHandler {
 
 
-    private static String SELLER = "Amazon";
-    private static String QUERY = "subject: \"Your Amazon.com order of\",  from: \"amazon.com\", contains \"order Confirmation\"";
+    private static String SELLER = "HostelWorld";
+    private static String QUERY = "from: \" hostelworld.com\", subject: \"confirmed booking from hostelworld.com\"";
 
     private String seller;
     private String query;
@@ -17,7 +17,7 @@ public class AmazonHandler extends SellerHandler {
     /**
      * sets seller name and query that retrieves the relevant seller messages.
      */
-    public AmazonHandler() {
+    public HostelworldHandler() {
         this.seller = this.SELLER;
         this.query = this.QUERY;
     }
@@ -48,10 +48,10 @@ private String getPrice (String input){
     int exactStartOfTotalPriceLocation;
     int exactEndOfTotalPriceLocation;
 
-    PricesLocation = input.indexOf("Order Total:");
-    exactStartOfTotalPriceLocation = input.indexOf("*",PricesLocation);
-    exactEndOfTotalPriceLocation = input.indexOf("*",exactStartOfTotalPriceLocation+1);
-    return input.substring(exactStartOfTotalPriceLocation+1, exactEndOfTotalPriceLocation);
+    PricesLocation = input.indexOf("Total: ");
+    exactStartOfTotalPriceLocation = PricesLocation+7; //7 chars in "Total: "
+    exactEndOfTotalPriceLocation = input.indexOf("\n",exactStartOfTotalPriceLocation+1);
+    return input.substring(exactStartOfTotalPriceLocation, exactEndOfTotalPriceLocation);
 }
 
     private String getItem (String input){
@@ -59,9 +59,9 @@ private String getPrice (String input){
         int exactStartOfItemLocation;
         int exactEndOfItemLocation;
 
-        itemLocation = input.indexOf("You ordered \"");
-        exactStartOfItemLocation = input.indexOf("\"",itemLocation);
-        exactEndOfItemLocation = input.indexOf("<",exactStartOfItemLocation+1);
+        itemLocation = input.indexOf("booking information");
+        exactStartOfItemLocation = itemLocation+23; //lineBreak after "booking information"
+        exactEndOfItemLocation = input.indexOf("\n",exactStartOfItemLocation+1);
         String res = input.substring(exactStartOfItemLocation, exactEndOfItemLocation-1);
         res = res.replace("\n", " ").replace("\r", ""); //remove line breaks
         return res;

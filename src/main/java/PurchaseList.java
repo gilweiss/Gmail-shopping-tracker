@@ -3,6 +3,7 @@ package main.java;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.Message;
 import main.java.seller_handlers.AmazonHandler;
+import main.java.seller_handlers.HostelworldHandler;
 import main.java.seller_handlers.SellerHandler;
 
 import java.io.IOException;
@@ -36,15 +37,13 @@ public class PurchaseList {
      * generate seller handlers into the sellerHandlers list
      * (the handlers in the list are responsible for generating the relevant purchases of the seller)
      *
-     * @param service Authorized Gmail API instance.
-     * @param userId  User's email address. The special value "me"
-     *                can be used to indicate the authenticated user.
      * @return a list of sellerHandler object
      */
     private List<SellerHandler> GenerateSellerHandlers() {
          List<SellerHandler> sellerHandlers = new ArrayList<SellerHandler>();
 
          sellerHandlers.add(new AmazonHandler());
+         sellerHandlers.add(new HostelworldHandler());
          /*
          TODO CREATE AND ADD MORE SELLER HANDLERS (like amazon`s) HERE
           */
