@@ -8,7 +8,7 @@ public class AmazonHandler extends SellerHandler {
 
 
     private static String SELLER = "Amazon";
-    private static String QUERY = "subject: \"Your Amazon.com order of\",  from: \"inbal sebag\", contains \"order Confirmation\"";
+    private static String QUERY = "subject: \"Your Amazon.com order of\",  from: \"Amazon.com\", contains \"order Confirmation\"";
 
     private String seller;
     private String query;
