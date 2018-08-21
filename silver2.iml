@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://E:/gmailAPIjar" />
+          <root url="file://E:/gmailAPIjar/libs" />
+          <root url="jar://E:/gmailAPIjar/google-api-services-gmail-v1-rev93-1.24.1.jar!/" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="jar://E:/gmailAPIjar/google-api-services-gmail-v1-rev93-1.24.1-javadoc.jar!/" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="file://E:/gmailAPIjar" />
+          <root url="file://E:/gmailAPIjar/libs-sources" />
+          <root url="jar://E:/gmailAPIjar/google-api-services-gmail-v1-rev93-1.24.1-sources.jar!/" />
+        </SOURCES>
+        <jarDirectory url="file://E:/gmailAPIjar" recursive="false" />
+        <jarDirectory url="file://E:/gmailAPIjar/libs" recursive="false" />
+        <jarDirectory url="file://E:/gmailAPIjar" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://E:/gmailAPIjar/libs-sources" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://E:/gmailAPIjar/dep2/commons-codec-1.11" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://E:/gmailAPIjar/dep2/commons-codec-1.11" />
+        </SOURCES>
+        <jarDirectory url="file://E:/gmailAPIjar/dep2/commons-codec-1.11" recursive="false" />
+        <jarDirectory url="file://E:/gmailAPIjar/dep2/commons-codec-1.11" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="javax.mail:javax.mail-api:1.6.1" level="project" />
+    <orderEntry type="library" name="com.google.api.client:google-api-client-repackaged-com-google-common-base:1.2.3-alpha" level="project" />
+  </component>
+</module>
