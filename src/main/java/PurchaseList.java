@@ -19,12 +19,11 @@ public class PurchaseList {
     List<SellerHandler> sellerHandlers;
 
     /**
-     * A class that contains the so desired purchases list
+     * A class that contains the so desired purchases list, the constructor will also generate a list of sellerHandler objects
      *
      * @param service Authorized Gmail API instance.
      * @param userId  User's email address. The special value "me"
      *                can be used to indicate the authenticated user.
-     * @return a list of sellerHandler object
      */
     public PurchaseList(Gmail service, String userId) throws IOException {
         this.purchaseList = new  ArrayList<Purchase>();
