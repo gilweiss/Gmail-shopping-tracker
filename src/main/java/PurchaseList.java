@@ -19,7 +19,7 @@ public class PurchaseList {
     List<SellerHandler> sellerHandlers;
 
     /**
-     * A class that contains the so desired purchases list, the constructor will also generate a list of sellerHandler objects
+     * The constructor will generate both a list of sellerHandler objects, and the desired list of purchases from inbox
      *
      * @param service Authorized Gmail API instance.
      * @param userId  User's email address. The special value "me"
