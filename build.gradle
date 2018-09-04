@@ -22,3 +22,5 @@ dependencies {
     compile 'org.apache.commons:commons-compress:1.17'
 
 }
+
+task stage(dependsOn: ['clean', 'installApp'])
