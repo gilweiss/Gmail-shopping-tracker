@@ -23,4 +23,13 @@ dependencies {
 
 }
 
-task stage(dependsOn: ['clean', 'installApp'])
+
+task copyToLib(type: Copy) {
+    into "$buildDir/lib"
+    from(configurations.compile)
+}
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+
+stage.dependsOn(copyToLib)
