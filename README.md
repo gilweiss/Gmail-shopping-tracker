@@ -1,10 +1,7 @@
-# first-steps-in-gmail-api
+# Gmail shopping tracker
 
-retrieves a list of all your online purchases by using the gmail api on order confirmation emails.<br/>
+A java app that retrieves a list of all your online purchases using Gmail api on order confirmation emails.<br/>
+The Project was built with OOP principles that ease the installation of more parsers for different sellers.
 
-add your credentials.json to (src/main/resources).<br/>
-add more seller handlers to handle sellers other than amazon
-
-use gradle run to start
-
-*tested on fwd messages only (used different queries to test)
+#### Screenshot:
+![  ](ShoppingTrackerscreenshot.png)
